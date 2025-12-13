@@ -8,7 +8,7 @@ Portfolio personnel — **Product Owner & Web3 Builder**
 
 ## 🚀 Live
 
-**[rasjojo.com(https://rasjojo.com)**
+**[rasjojo.com](https://rasjojo.com)**
 
 ## ✨ Stack
 
