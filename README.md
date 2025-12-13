@@ -8,7 +8,7 @@ Portfolio personnel — **Product Owner & Web3 Builder**
 
 ## 🚀 Live
 
-**[ras-jojo.vercel.app](https://ras-jojo.vercel.app)**
+**[ras-jojo.vercel.app](https://rasjojo.com)**
 
 ## ✨ Stack
 
