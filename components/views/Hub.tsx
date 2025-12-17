@@ -48,10 +48,10 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
               </div>
 
               {/* Hero Title - RESPONSIVE FIX */}
-              <h1 className="font-display font-bold leading-[0.9] tracking-tighter uppercase relative z-20">
-                  <span className="block text-[clamp(2.2rem,7vw,6rem)] text-white">TRANSFORMING</span>
-                  <span className="block text-[clamp(2.2rem,7vw,6rem)] text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}>IDEAS INTO</span>
-                  <span className="block text-[clamp(2.2rem,7vw,6rem)] text-white drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">PRODUCTS.</span>
+              <h1 className="hub-hero-title font-display font-bold leading-[0.9] tracking-tighter uppercase relative z-20">
+                  <span className="block text-white">TRANSFORMING</span>
+                  <span className="block text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}>IDEAS INTO</span>
+                  <span className="block text-white drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">PRODUCTS.</span>
               </h1>
               
               {/* Description & CTA */}
