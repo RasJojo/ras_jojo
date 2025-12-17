@@ -20,7 +20,7 @@ function App() {
   ];
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden text-white font-sans selection:bg-white selection:text-black">
+    <div className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden text-white font-sans selection:bg-white selection:text-black">
       
       {/* HEADER DESKTOP */}
       <div className="fixed top-8 left-8 z-40 mix-blend-difference pointer-events-none hidden md:block">
@@ -29,7 +29,7 @@ function App() {
       </div>
       
       {/* HEADER MOBILE */}
-      <div className="fixed top-0 left-0 w-full z-40 p-6 bg-gradient-to-b from-bg via-bg/90 to-transparent md:hidden flex justify-between items-start pointer-events-none">
+      <div className="fixed top-0 left-0 w-full z-40 px-6 pb-6 pt-[calc(1.5rem+var(--safe-top))] bg-gradient-to-b from-bg via-bg/90 to-transparent md:hidden flex justify-between items-start pointer-events-none">
         <div>
           <div className="font-display font-bold text-lg leading-none">RAS_JOJO</div>
           <div className="text-[9px] tracking-widest opacity-60 mt-1">PO & WEB3 BUILDER</div>
@@ -63,7 +63,7 @@ function App() {
       </AnimatePresence>
 
       {/* NAVIGATION BAR - RESPONSIVE & CENTERED */}
-      <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center pb-6 md:pb-8 pointer-events-none">
+      <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center pb-[calc(1.5rem+var(--safe-bottom))] md:pb-[calc(2rem+var(--safe-bottom))] pointer-events-none">
         <div className="glass-card px-2 py-2 mx-4 rounded-2xl flex items-center justify-between gap-1 pointer-events-auto shadow-2xl w-full max-w-[320px] md:w-auto md:max-w-none">
           {navItems.map((item, index) => {
             const isActive = view === item.id;

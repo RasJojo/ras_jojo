@@ -9,7 +9,7 @@ const WorkView: React.FC = () => {
   return (
     <div className="h-full w-full bg-bg relative flex flex-col">
       
-      <div className="flex-1 overflow-y-auto px-4 md:px-12 pt-28 pb-32 scroll-smooth">
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 md:px-12 pt-[calc(6rem+var(--safe-top))] md:pt-[calc(7rem+var(--safe-top))] pb-[calc(7rem+var(--safe-bottom))] md:pb-[calc(8rem+var(--safe-bottom))] scroll-smooth">
         <div className="max-w-[1600px] mx-auto">
           
            {/* Header Section */}
@@ -29,17 +29,19 @@ const WorkView: React.FC = () => {
 
            {/* Projects List */}
            <div className="grid grid-cols-1 gap-6 relative isolate">
-              {PROJECTS.map((project, index) => (
-                 <motion.div
-                    key={project.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    onMouseEnter={() => setHoveredProject(project.id)}
-                    onMouseLeave={() => setHoveredProject(null)}
-                    style={{ zIndex: hoveredProject === project.id ? 50 : 1 }}
-                    className={`glass-panel p-6 md:p-10 rounded-xl relative group cursor-default transition-all duration-300 hover:border-blockchain/40`}
-                 >
+              {PROJECTS.map((project, index) => {
+                 const isContain = project.imageFit === 'contain';
+                 return (
+                   <motion.div
+                      key={project.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      onMouseEnter={() => setHoveredProject(project.id)}
+                      onMouseLeave={() => setHoveredProject(null)}
+                      style={{ zIndex: hoveredProject === project.id ? 50 : 1 }}
+                      className={`glass-panel p-6 md:p-10 rounded-xl relative group cursor-default transition-all duration-300 hover:border-blockchain/40`}
+                   >
                     <div className="flex flex-col md:flex-row gap-6 md:gap-12 relative z-10 items-start">
                        
                        {/* Index */}
@@ -91,7 +93,7 @@ const WorkView: React.FC = () => {
                              animate={{ opacity: 1, scale: 1, x: 0 }}
                              exit={{ opacity: 0, scale: 0.95 }}
                              transition={{ duration: 0.2 }}
-                             className="hidden xl:block absolute right-10 top-1/2 -translate-y-1/2 w-[400px] h-[250px] pointer-events-none rounded-lg overflow-hidden border border-white/10 bg-black shadow-2xl"
+                             className="hidden xl:block absolute right-10 top-1/2 -translate-y-1/2 w-[clamp(260px,30vw,420px)] aspect-[16/10] pointer-events-none rounded-lg overflow-hidden border border-white/10 bg-black shadow-2xl"
                              style={{ zIndex: 100 }}
                           >
                              {/* Background & Image handling */}
@@ -99,16 +101,19 @@ const WorkView: React.FC = () => {
                              <img 
                                 src={project.imageUrl} 
                                 alt={project.title} 
-                                className={`w-full h-full relative z-10 ${project.title === 'Shingo' ? 'object-contain p-8' : 'object-cover opacity-80'}`} 
+                                loading="lazy"
+                                decoding="async"
+                                className={`w-full h-full relative z-10 ${isContain ? 'object-contain p-6' : 'object-cover opacity-80'}`} 
                              />
-                             {project.title !== 'Shingo' && (
+                             {!isContain && (
                                 <div className="absolute inset-0 bg-blockchain/10 mix-blend-overlay z-20"></div>
                              )}
                           </motion.div>
                        )}
                     </AnimatePresence>
-                 </motion.div>
-              ))}
+                   </motion.div>
+                 );
+              })}
            </div>
         </div>
       </div>

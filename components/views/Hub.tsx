@@ -32,9 +32,9 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
 
       {/* Main Container */}
-      <div className="flex-1 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
+      <div className="flex-1 min-h-0 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
         
-        <div className="px-6 md:px-20 pt-20 pb-12 flex flex-col justify-center h-full min-h-[500px]">
+        <div className="px-6 md:px-20 pt-[calc(5rem+var(--safe-top))] pb-12 flex flex-col justify-center min-h-[min(520px,70vh)]">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -42,16 +42,16 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
               className="flex flex-col gap-6 md:gap-10"
             >
               {/* Header Tag */}
-              <div className="flex items-center gap-2 font-mono text-blockchain tracking-widest text-[10px] md:text-sm">
+              <div className="flex flex-wrap items-center gap-2 font-mono text-blockchain tracking-widest text-[10px] md:text-sm">
                 <span className="w-2 h-2 bg-blockchain rounded-full animate-pulse"></span>
-                RAS_JOJO // PORTFOLIO V2
+                Rasamimanana Joela (Ras Jojo) // PORTFOLIO V2
               </div>
 
               {/* Hero Title - RESPONSIVE FIX */}
               <h1 className="font-display font-bold leading-[0.9] tracking-tighter uppercase relative z-20">
-                  <span className="block text-3xl sm:text-6xl md:text-[7vw] text-white">TRANSFORMING</span>
-                  <span className="block text-3xl sm:text-6xl md:text-[7vw] text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}>IDEAS INTO</span>
-                  <span className="block text-3xl sm:text-6xl md:text-[7vw] text-white drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">PRODUCTS.</span>
+                  <span className="block text-[clamp(2.2rem,7vw,6rem)] text-white">TRANSFORMING</span>
+                  <span className="block text-[clamp(2.2rem,7vw,6rem)] text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}>IDEAS INTO</span>
+                  <span className="block text-[clamp(2.2rem,7vw,6rem)] text-white drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">PRODUCTS.</span>
               </h1>
               
               {/* Description & CTA */}
@@ -73,7 +73,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       </div>
 
       {/* Footer Ticker */}
-      <div className="pb-24 md:pb-28 z-20">
+      <div className="pb-[calc(6rem+var(--safe-bottom))] md:pb-[calc(7rem+var(--safe-bottom))] z-20">
          <Marquee text="BLOCKCHAIN • PRODUCT OWNER • DEFI • WEB3 • INNOVATION" />
       </div>
 

@@ -95,6 +95,7 @@ export const PROJECTS: Project[] = [
     title: "Shingo",
     description: "Marketplace décentralisée sur Solana pour l'achat et la vente de signaux de trading vérifiés on-chain.",
     imageUrl: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+    imageFit: "contain",
     link: "https://github.com/JoelaRAS/shingo",
     technologies: ["Solana", "Rust", "Marketplace"]
   },
@@ -108,7 +109,7 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-export const BIO = `Je suis Rasamimanana Andritiana Joela (Ras_Jojo), Product Owner et passionné de Blockchain. 
+export const BIO = `Je suis Rasamimanana Joela, aussi connu sous le nom de Rasamimanana Andritiana Joela (Ras Jojo / Ras_Jojo), Product Owner et passionné de Blockchain. 
 J'aime transformer des idées et des besoins en produits concrets. 
 Expert en méthodologie Agile et stratégie produit, je fusionne vision technique et expérience utilisateur pour bâtir le Web3.`;
 

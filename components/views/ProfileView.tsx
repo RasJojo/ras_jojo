@@ -7,14 +7,14 @@ const ProfileView: React.FC = () => {
   return (
     <div className="h-full w-full bg-bg relative flex flex-col">
        
-       <div className="flex-1 overflow-y-auto px-4 md:px-12 pt-28 pb-32 scroll-smooth">
+       <div className="flex-1 min-h-0 overflow-y-auto px-4 md:px-12 pt-[calc(6rem+var(--safe-top))] md:pt-[calc(7rem+var(--safe-top))] pb-[calc(7rem+var(--safe-bottom))] md:pb-[calc(8rem+var(--safe-bottom))] scroll-smooth">
           <div className="max-w-[1600px] mx-auto">
             
             {/* Header Identity */}
             <div className="flex flex-col lg:flex-row gap-12 mb-16">
                <div className="lg:w-2/3">
                   <h1 className="font-display font-bold text-4xl md:text-6xl mb-6 uppercase leading-tight">
-                    Product Owner<br/><span className="text-blockchain">& Builder.</span>
+                    Rasamimanana Joela<br/><span className="text-blockchain">Product Owner & Builder.</span>
                   </h1>
                   <p className="font-sans text-base md:text-lg text-white/60 leading-relaxed max-w-2xl">
                      {BIO}

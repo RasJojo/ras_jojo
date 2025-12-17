@@ -29,6 +29,7 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  imageFit?: 'cover' | 'contain';
   link?: string;
   technologies: string[];
 }
