@@ -34,7 +34,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       {/* Main Container */}
       <div className="flex-1 min-h-0 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
         
-        <div className="hub-hero-spacing hub-hero-layout px-6 md:px-20 pb-12 flex flex-col min-h-[min(520px,70vh)]">
+        <div className="hub-hero-spacing hub-hero-layout relative px-6 md:px-20 pb-12 flex flex-col min-h-[min(520px,70vh)]">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
               className="hub-hero-stack flex flex-col gap-6 md:gap-10"
             >
               {/* Header Tag */}
-              <div className="flex flex-wrap items-center gap-2 font-mono text-blockchain tracking-widest text-[10px] md:text-sm">
+              <div className="hub-topline flex flex-wrap items-center gap-2 font-mono text-blockchain tracking-widest text-[10px] md:text-sm">
                 <span className="w-2 h-2 bg-blockchain rounded-full animate-pulse"></span>
                 Rasamimanana Joela (Ras Jojo) // PORTFOLIO V2
               </div>
@@ -56,14 +56,14 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
               
               {/* Description & CTA */}
               <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mt-4 border-l-2 border-white/10 pl-6">
-                  <p className="font-sans text-sm md:text-lg text-white/50 leading-relaxed max-w-lg">
+                  <p className="hub-description font-sans text-sm md:text-lg text-white/50 leading-relaxed max-w-lg">
                     <strong className="text-white">Product Owner & Blockchain Builder.</strong><br/>
                     Je transforme des concepts abstraits en produits digitaux tangibles. Expert SUI, XRPL & Solana.
                   </p>
 
                   <button 
                     onClick={() => setView('WORK')}
-                    className="group flex items-center gap-3 px-6 py-3 bg-white text-black rounded-sm font-bold text-xs md:text-sm tracking-widest hover:bg-blockchain hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    className="hub-cta group flex items-center gap-3 px-6 py-3 bg-white text-black rounded-sm font-bold text-xs md:text-sm tracking-widest hover:bg-blockchain hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                   >
                     EXPLORE PROJECTS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -73,7 +73,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       </div>
 
       {/* Footer Ticker */}
-      <div className="pb-[calc(6rem+var(--safe-bottom))] md:pb-[calc(7rem+var(--safe-bottom))] z-20">
+      <div className="hub-marquee pb-[calc(6rem+var(--safe-bottom))] md:pb-[calc(7rem+var(--safe-bottom))] z-20">
          <Marquee text="BLOCKCHAIN • PRODUCT OWNER • DEFI • WEB3 • INNOVATION" />
       </div>
 
