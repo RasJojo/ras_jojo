@@ -23,13 +23,13 @@ function App() {
     <div className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden text-white font-sans selection:bg-white selection:text-black">
       
       {/* HEADER DESKTOP */}
-      <div className="fixed top-8 left-8 z-40 mix-blend-difference pointer-events-none hidden md:block">
+      <div className="fixed z-40 mix-blend-difference pointer-events-none hidden md:block top-[calc(var(--header-offset)+var(--safe-top))] left-[var(--header-offset)]">
         <div className="font-display font-bold text-xl leading-none">RAS_JOJO</div>
         <div className="text-[10px] tracking-widest opacity-60 mt-1">PRODUCT OWNER & BLOCKCHAIN</div>
       </div>
       
       {/* HEADER MOBILE */}
-      <div className="fixed top-0 left-0 w-full z-40 px-6 pb-6 pt-[calc(1.5rem+var(--safe-top))] bg-gradient-to-b from-bg via-bg/90 to-transparent md:hidden flex justify-between items-start pointer-events-none">
+      <div className="fixed top-0 left-0 w-full z-40 px-[var(--header-offset)] pb-[var(--header-offset)] pt-[calc(var(--header-offset)+var(--safe-top))] bg-gradient-to-b from-bg via-bg/90 to-transparent md:hidden flex justify-between items-start pointer-events-none">
         <div>
           <div className="font-display font-bold text-lg leading-none">RAS_JOJO</div>
           <div className="text-[9px] tracking-widest opacity-60 mt-1">PO & WEB3 BUILDER</div>
@@ -38,7 +38,7 @@ function App() {
       </div>
       
       {/* NETWORK STATUS (Desktop Only) */}
-      <div className="fixed top-8 right-8 z-40 flex flex-col items-end mix-blend-difference pointer-events-none hidden md:block">
+      <div className="fixed z-40 flex flex-col items-end mix-blend-difference pointer-events-none hidden md:block top-[calc(var(--header-offset)+var(--safe-top))] right-[var(--header-offset)]">
          <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
             <span className="text-[10px] tracking-widest">NETWORK: MAINNET</span>

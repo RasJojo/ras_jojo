@@ -56,6 +56,7 @@
         --safe-top: env(safe-area-inset-top, 0px);
         --safe-bottom: env(safe-area-inset-bottom, 0px);
         --fluid-base: clamp(14px, 0.7vw + 0.6vh + 8px, 16px);
+        --header-offset: clamp(1.25rem, 3vmin, 2rem);
         --page-top: clamp(3.5rem, 8vmin, 6.5rem);
         --page-bottom: clamp(4rem, 9vmin, 7.5rem);
         --hub-spacing-top: clamp(4rem, 9vmin, 7rem);
@@ -69,9 +70,9 @@
         --hub-cta-font: clamp(0.6rem, 1.7vmin, 0.85rem);
         --hub-cta-y: clamp(0.4rem, 1.2vmin, 0.7rem);
         --hub-cta-x: clamp(0.9rem, 2.8vmin, 1.5rem);
+        --hub-marquee-width: clamp(220px, 42vw, 560px);
         --hub-marquee-text: clamp(0.9rem, 3vmin, 2.1rem);
         --hub-marquee-pad: clamp(0.3rem, 1.2vmin, 0.55rem);
-        --hub-marquee-bottom: clamp(3rem, 7vmin, 6.5rem);
       }
 
       html, body, #root {
@@ -156,7 +157,7 @@
       }
 
       .hub-marquee {
-        padding-bottom: calc(var(--hub-marquee-bottom) + var(--safe-bottom));
+        width: var(--hub-marquee-width);
       }
 
       .hub-marquee-track {
@@ -166,6 +167,15 @@
 
       .hub-marquee-text {
         font-size: var(--hub-marquee-text);
+      }
+
+      .hub-marquee-top {
+        position: fixed;
+        top: calc(var(--header-offset) + var(--safe-top));
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 40;
+        pointer-events: none;
       }
 
       /* Custom Scrollbar */

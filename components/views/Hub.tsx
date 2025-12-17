@@ -31,6 +31,11 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blockchain/5 rounded-full blur-[150px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
 
+      {/* Marquee Top */}
+      <div className="hub-marquee hub-marquee-top hidden md:block">
+         <Marquee text="BLOCKCHAIN • PRODUCT OWNER • DEFI • WEB3 • INNOVATION" />
+      </div>
+
       {/* Main Container */}
       <div className="flex-1 min-h-0 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
         
@@ -70,11 +75,6 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
               </div>
             </motion.div>
         </div>
-      </div>
-
-      {/* Footer Ticker */}
-      <div className="hub-marquee z-20">
-         <Marquee text="BLOCKCHAIN • PRODUCT OWNER • DEFI • WEB3 • INNOVATION" />
       </div>
 
     </div>
