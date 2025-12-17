@@ -8,14 +8,14 @@ interface HubProps {
 }
 
 const Marquee = ({ text }: { text: string }) => (
-  <div className="relative flex overflow-hidden py-3 border-y border-white/5 bg-white/[0.01]">
+  <div className="hub-marquee-track relative flex overflow-hidden py-3 border-y border-white/5 bg-white/[0.01]">
     <motion.div 
       className="flex whitespace-nowrap"
       animate={{ x: [0, -1000] }}
       transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
     >
       {[...Array(8)].map((_, i) => (
-        <span key={i} className="text-xl md:text-4xl font-display font-bold text-white/20 px-4 md:px-8 uppercase tracking-widest">
+        <span key={i} className="hub-marquee-text text-xl md:text-4xl font-display font-bold text-white/20 px-4 md:px-8 uppercase tracking-widest">
           {text} •
         </span>
       ))}
@@ -34,7 +34,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       {/* Main Container */}
       <div className="flex-1 min-h-0 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
         
-        <div className="hub-hero-spacing hub-hero-layout relative px-6 md:px-20 pb-12 flex flex-col min-h-[min(520px,70vh)]">
+        <div className="hub-hero-spacing hub-hero-layout hub-hero-frame relative px-6 md:px-20 pb-12 flex flex-col">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
               </h1>
               
               {/* Description & CTA */}
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mt-4 border-l-2 border-white/10 pl-6">
+              <div className="hub-meta flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mt-4 border-l-2 border-white/10 pl-6">
                   <p className="hub-description font-sans text-sm md:text-lg text-white/50 leading-relaxed max-w-lg">
                     <strong className="text-white">Product Owner & Blockchain Builder.</strong><br/>
                     Je transforme des concepts abstraits en produits digitaux tangibles. Expert SUI, XRPL & Solana.
