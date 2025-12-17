@@ -38,12 +38,12 @@ export const EXPERIENCES: Experience[] = [
 export const HACKATHONS: Hackathon[] = [
   {
     id: 'h1',
-    name: "Paris Blockchain Week",
+    name: "Bahamut Hackathon",
     year: "2025",
-    project: "Projet DeFi",
+    project: "Projet Bahamut",
     award: "🥇 1ère Place",
-    description: "Développement d'une solution blockchain innovante lors de la PBW.",
-    tags: ["Blockchain", "Web3"]
+    description: "Victoire sur l'écosystème Bahamut avec un projet blockchain.",
+    tags: ["Bahamut", "Blockchain"]
   },
   {
     id: 'h2',
@@ -57,11 +57,11 @@ export const HACKATHONS: Hackathon[] = [
   {
     id: 'h3',
     name: "Paris Blockchain Week",
-    year: "2025",
-    project: "Track Secondaire",
+    year: "2024",
+    project: "Track Solana",
     award: "🥈 2ème Place",
-    description: "Double victoire lors de la même édition sur un track parallèle.",
-    tags: ["Web3", "Innovation"]
+    description: "2ème place sur la track Solana.",
+    tags: ["Solana", "Web3"]
   },
   {
     id: 'h4',

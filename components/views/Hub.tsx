@@ -8,14 +8,14 @@ interface HubProps {
 }
 
 const Marquee = ({ text }: { text: string }) => (
-  <div className="hub-marquee-track relative flex overflow-hidden py-3 border-y border-white/5 bg-white/[0.01]">
+  <div className="hub-marquee-track relative flex overflow-hidden py-2 border-y border-white/5 bg-white/[0.01]">
     <motion.div 
       className="flex whitespace-nowrap"
       animate={{ x: [0, -1000] }}
       transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
     >
       {[...Array(8)].map((_, i) => (
-        <span key={i} className="hub-marquee-text text-xl md:text-4xl font-display font-bold text-white/20 px-4 md:px-8 uppercase tracking-widest">
+        <span key={i} className="hub-marquee-text text-lg md:text-3xl font-display font-bold text-white/20 px-4 md:px-8 uppercase tracking-widest">
           {text} •
         </span>
       ))}
