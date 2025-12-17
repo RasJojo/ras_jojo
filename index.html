@@ -98,15 +98,27 @@
         padding-top: calc(6rem + var(--safe-top));
       }
 
+      .hub-hero-layout {
+        justify-content: center;
+      }
+
       @media (min-width: 768px) {
         .hub-hero-spacing {
           padding-top: calc(7rem + var(--safe-top));
         }
       }
 
-      @media (max-height: 700px) {
+      @media (max-height: 760px) and (min-width: 768px) {
         .hub-hero-spacing {
-          padding-top: calc(9rem + var(--safe-top));
+          padding-top: calc(10rem + var(--safe-top));
+        }
+
+        .hub-hero-layout {
+          justify-content: flex-start;
+        }
+
+        .hub-hero-stack {
+          gap: 1rem;
         }
       }
 

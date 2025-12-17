@@ -34,12 +34,12 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       {/* Main Container */}
       <div className="flex-1 min-h-0 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
         
-        <div className="hub-hero-spacing px-6 md:px-20 pb-12 flex flex-col justify-center min-h-[min(520px,70vh)]">
+        <div className="hub-hero-spacing hub-hero-layout px-6 md:px-20 pb-12 flex flex-col min-h-[min(520px,70vh)]">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col gap-6 md:gap-10"
+              className="hub-hero-stack flex flex-col gap-6 md:gap-10"
             >
               {/* Header Tag */}
               <div className="flex flex-wrap items-center gap-2 font-mono text-blockchain tracking-widest text-[10px] md:text-sm">
