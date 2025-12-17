@@ -9,7 +9,7 @@ const WorkView: React.FC = () => {
   return (
     <div className="h-full w-full bg-bg relative flex flex-col">
       
-      <div className="flex-1 min-h-0 overflow-y-auto px-4 md:px-12 pt-[calc(6rem+var(--safe-top))] md:pt-[calc(7rem+var(--safe-top))] pb-[calc(7rem+var(--safe-bottom))] md:pb-[calc(8rem+var(--safe-bottom))] scroll-smooth">
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 md:px-12 pt-[calc(var(--page-top)+var(--safe-top))] pb-[calc(var(--page-bottom)+var(--safe-bottom))] scroll-smooth">
         <div className="max-w-[1600px] mx-auto">
           
            {/* Header Section */}

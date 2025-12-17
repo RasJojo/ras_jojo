@@ -55,10 +55,31 @@
       :root {
         --safe-top: env(safe-area-inset-top, 0px);
         --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --fluid-base: clamp(14px, 0.7vw + 0.6vh + 8px, 16px);
+        --page-top: clamp(3.5rem, 8vmin, 6.5rem);
+        --page-bottom: clamp(4rem, 9vmin, 7.5rem);
+        --hub-spacing-top: clamp(4rem, 9vmin, 7rem);
+        --hub-spacing-bottom: clamp(1.5rem, 4vmin, 3rem);
+        --hub-hero-min-height: clamp(12rem, 40vmin, 30rem);
+        --hub-gap: clamp(0.75rem, 2.6vmin, 2.5rem);
+        --hub-title-size: clamp(1.6rem, 6vmin, 5.6rem);
+        --hub-title-line: 0.9;
+        --hub-topline-size: clamp(0.55rem, 1.5vmin, 0.85rem);
+        --hub-desc-size: clamp(0.85rem, 1.9vmin, 1.05rem);
+        --hub-cta-font: clamp(0.6rem, 1.7vmin, 0.85rem);
+        --hub-cta-y: clamp(0.4rem, 1.2vmin, 0.7rem);
+        --hub-cta-x: clamp(0.9rem, 2.8vmin, 1.5rem);
+        --hub-marquee-text: clamp(0.9rem, 3vmin, 2.1rem);
+        --hub-marquee-pad: clamp(0.3rem, 1.2vmin, 0.55rem);
+        --hub-marquee-bottom: clamp(3rem, 7vmin, 6.5rem);
       }
 
       html, body, #root {
         height: 100%;
+      }
+
+      html {
+        font-size: var(--fluid-base);
       }
 
       body {
@@ -95,114 +116,56 @@
       }
 
       .hub-hero-spacing {
-        padding-top: calc(6rem + var(--safe-top));
-      }
-
-      .hub-hero-title span {
-        font-size: clamp(2.2rem, 7vw, 6rem);
+        padding-top: calc(var(--hub-spacing-top) + var(--safe-top));
+        padding-bottom: var(--hub-spacing-bottom);
       }
 
       .hub-hero-frame {
-        min-height: min(520px, 70vh);
+        min-height: var(--hub-hero-min-height);
+      }
+
+      .hub-hero-title span {
+        font-size: var(--hub-title-size);
+      }
+
+      .hub-hero-title {
+        line-height: var(--hub-title-line);
       }
 
       .hub-hero-layout {
         justify-content: center;
       }
 
+      .hub-hero-stack {
+        gap: var(--hub-gap);
+      }
+
       .hub-topline {
         width: 100%;
+        font-size: var(--hub-topline-size);
       }
 
-      @media (min-width: 768px) {
-        .hub-hero-spacing {
-          padding-top: calc(7rem + var(--safe-top));
-        }
+      .hub-description {
+        font-size: var(--hub-desc-size);
+        line-height: 1.35;
       }
 
-      @media (max-height: 760px) {
-        .hub-hero-spacing {
-          padding-top: calc(5.5rem + var(--safe-top));
-          padding-bottom: 2rem;
-        }
-
-        .hub-hero-layout {
-          justify-content: flex-start;
-        }
-
-        .hub-hero-stack {
-          gap: 0.75rem;
-        }
-
-        .hub-hero-frame {
-          min-height: 0;
-        }
-
-        .hub-hero-title {
-          line-height: 0.85;
-        }
-
-        .hub-hero-title span {
-          font-size: clamp(1.6rem, 4.8vw, 4.2rem);
-        }
-
-        .hub-meta {
-          margin-top: 0.5rem;
-        }
-
-        .hub-description {
-          font-size: 0.85rem;
-          line-height: 1.3;
-        }
-
-        .hub-description br {
-          display: none;
-        }
-
-        .hub-cta {
-          padding: 0.45rem 1rem;
-          font-size: 0.65rem;
-        }
-
-        .hub-marquee {
-          padding-bottom: calc(3.5rem + var(--safe-bottom));
-        }
-
-        .hub-marquee-track {
-          padding-top: 0.35rem;
-          padding-bottom: 0.35rem;
-        }
-
-        .hub-marquee-text {
-          font-size: 1rem;
-        }
+      .hub-cta {
+        padding: var(--hub-cta-y) var(--hub-cta-x);
+        font-size: var(--hub-cta-font);
       }
 
-      @media (max-height: 620px) {
-        .hub-hero-title {
-          line-height: 0.8;
-        }
+      .hub-marquee {
+        padding-bottom: calc(var(--hub-marquee-bottom) + var(--safe-bottom));
+      }
 
-        .hub-hero-title span {
-          font-size: clamp(1.3rem, 4.2vw, 3.6rem);
-        }
+      .hub-marquee-track {
+        padding-top: var(--hub-marquee-pad);
+        padding-bottom: var(--hub-marquee-pad);
+      }
 
-        .hub-description {
-          font-size: 0.8rem;
-        }
-
-        .hub-cta {
-          padding: 0.4rem 0.9rem;
-          font-size: 0.6rem;
-        }
-
-        .hub-marquee {
-          padding-bottom: calc(3rem + var(--safe-bottom));
-        }
-
-        .hub-marquee-text {
-          font-size: 0.85rem;
-        }
+      .hub-marquee-text {
+        font-size: var(--hub-marquee-text);
       }
 
       /* Custom Scrollbar */
