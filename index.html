@@ -94,6 +94,22 @@
         border-color: rgba(37, 99, 235, 0.3); /* Blockchain Blue Border on Hover */
       }
 
+      .hub-hero-spacing {
+        padding-top: calc(6rem + var(--safe-top));
+      }
+
+      @media (min-width: 768px) {
+        .hub-hero-spacing {
+          padding-top: calc(7rem + var(--safe-top));
+        }
+      }
+
+      @media (max-height: 700px) {
+        .hub-hero-spacing {
+          padding-top: calc(9rem + var(--safe-top));
+        }
+      }
+
       /* Custom Scrollbar */
       ::-webkit-scrollbar { width: 4px; }
       ::-webkit-scrollbar-track { background: transparent; }

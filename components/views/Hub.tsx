@@ -34,7 +34,7 @@ const Hub: React.FC<HubProps> = ({ setView }) => {
       {/* Main Container */}
       <div className="flex-1 min-h-0 flex flex-col justify-center w-full max-w-[1800px] mx-auto z-10 overflow-y-auto custom-scrollbar">
         
-        <div className="px-6 md:px-20 pt-[calc(6rem+var(--safe-top))] md:pt-[calc(7rem+var(--safe-top))] pb-12 flex flex-col justify-center min-h-[min(520px,70vh)]">
+        <div className="hub-hero-spacing px-6 md:px-20 pb-12 flex flex-col justify-center min-h-[min(520px,70vh)]">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
